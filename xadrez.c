@@ -11,7 +11,6 @@ int main() {
 
     // =========================
     // MOVIMENTO DA TORRE (for)
-    // A torre vai se mover 5 casas para a direita
     // =========================
     printf("Movimento da Torre:\n");
 
@@ -21,7 +20,6 @@ int main() {
 
     // =========================
     // MOVIMENTO DO BISPO (while)
-    // O bispo vai se mover 5 casas na diagonal (Cima, Direita)
     // =========================
     printf("\nMovimento do Bispo:\n");
 
@@ -33,7 +31,6 @@ int main() {
 
     // =========================
     // MOVIMENTO DA RAINHA (do-while)
-    // A rainha vai se mover 8 casas para a esquerda
     // =========================
     printf("\nMovimento da Rainha:\n");
 
@@ -42,6 +39,27 @@ int main() {
         printf("Esquerda\n");
         contadorRainha++;
     } while (contadorRainha < casasRainha);
+
+    // ======================================================
+    // MOVIMENTO DO CAVALO (loops aninhados: for + while)
+    // O cavalo se move em "L": 2 casas para baixo e 1 esquerda
+    // ======================================================
+    printf("\nMovimento do Cavalo:\n");
+
+    int casasBaixo = 2;
+    int casasEsquerda = 1;
+
+    // Loop externo (for) -> controla as duas casas para baixo
+    for (int i = 0; i < casasBaixo; i++) {
+        printf("Baixo\n");
+    }
+
+    // Loop interno (while) -> controla a casa para a esquerda
+    int contadorEsquerda = 0;
+    while (contadorEsquerda < casasEsquerda) {
+        printf("Esquerda\n");
+        contadorEsquerda++;
+    }
 
     return 0;
 }
